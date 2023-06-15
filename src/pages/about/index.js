@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import {
-  dataabout,
   meta,
-  worktimeline,
-  skills,
-  services,
+  aboutDocuments
 } from "../../content_option";
 
 export const About = () => {
+  const [enlargedImage, setEnlargedImage] = useState(null);
+
+  const handleImageClick = (e) => {
+    const image = e.target;
+    setEnlargedImage(image.src);
+  };
+
+  const handleCloseClick = () => {
+    setEnlargedImage(null);
+  };
+
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -25,75 +33,27 @@ export const About = () => {
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
-        <Row className="sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">{dataabout.title}</h3>
-          </Col>
-          <Col lg="7" className="d-flex align-items-center">
-            <div>
-              <p>{dataabout.aboutme}</p>
-            </div>
-          </Col>
-        </Row>
-        <Row className=" sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">Work Timline</h3>
-          </Col>
-          <Col lg="7">
-            <table className="table caption-top">
-              <tbody>
-                {worktimeline.map((data, i) => {
-                  return (
-                    <tr key={i}>
-                      <th scope="row">{data.jobtitle}</th>
-                      <td>{data.where}</td>
-                      <td>{data.date}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </Col>
-        </Row>
-        <Row className="sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">Skills</h3>
-          </Col>
-          <Col lg="7">
-            {skills.map((data, i) => {
-              return (
-                <div key={i}>
-                  <h3 className="progress-title">{data.name}</h3>
-                  <div className="progress">
-                    <div
-                      className="progress-bar"
-                      style={{
-                        width: `${data.value}%`,
-                      }}
-                    >
-                      <div className="progress-value">{data.value}%</div>
-                    </div>
+        <Row>
+          <div className="fixed-menu">
+            {aboutDocuments.map((document) => (
+                <div className='imageContainer'>
+                  <div className="text-container-about">
+                    <p>{document.title}</p>
                   </div>
+                  <img
+                    src={document.link}
+                    className="menu-image"
+                    onClick={handleImageClick}
+                  />
                 </div>
-              );
-            })}
-          </Col>
+            ))}
+          </div>
         </Row>
-        <Row className="sec_sp">
-          <Col lang="5">
-            <h3 className="color_sec py-4">services</h3>
-          </Col>
-          <Col lg="7">
-            {services.map((data, i) => {
-              return (
-                <div className="service_ py-4" key={i}>
-                  <h5 className="service__title">{data.title}</h5>
-                  <p className="service_desc">{data.description}</p>
-                </div>
-              );
-            })}
-          </Col>
-        </Row>
+        {enlargedImage && (
+          <div className="enlarged-image" onClick={handleCloseClick}>
+            <img src={enlargedImage} alt="Enlarged" />
+          </div>
+        )}
       </Container>
     </HelmetProvider>
   );

@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
 
+function PortfolioItem({ data }) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <a href={data.link} className="po_item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div className="image-container">
+        <img src={isHovered ? data.img : data.bw_image} alt="" />
+      </div>
+      <div className="content">
+        <p>{data.description}</p>
+        <a>View Project</a>
+      </div>
+    </a>
+  );
+}
+
 export const Portfolio = () => {
+  
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -20,17 +45,9 @@ export const Portfolio = () => {
           </Col>
         </Row>
         <div className="mb-5 po_items_ho">
-          {dataportfolio.map((data, i) => {
-            return (
-              <div key={i} className="po_item">
-                <img src={data.img} alt="" />
-                <div className="content">
-                  <p>{data.description}</p>
-                  <a href={data.link}>view project</a>
-                </div>
-              </div>
-            );
-          })}
+          {dataportfolio.map((data, i) => (
+            <PortfolioItem key={i} data={data} />
+          ))}
         </div>
       </Container>
     </HelmetProvider>

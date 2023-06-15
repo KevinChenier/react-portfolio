@@ -161,7 +161,7 @@
     padding-left: 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 991.98px) {
     .menu__container {
         margin-left: 33.3333%;
     }
@@ -190,6 +190,12 @@
 @media (min-width: 768px) {
     .the_menu .menu_item>a {
         font-size: 4.8vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .d-flex.justify-content-end .navbar-brand{
+        display: none;
     }
 }
 

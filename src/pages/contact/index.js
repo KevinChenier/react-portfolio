@@ -22,11 +22,13 @@ export const ContactUs = () => {
     setFormdata({ loading: true });
 
     const templateParams = {
-      from_name: formData.email,
-      user_name: formData.name,
+      from_email: formData.email,
+      from_name: formData.name,
       to_name: contactConfig.YOUR_EMAIL,
       message: formData.message,
     };
+
+    emailjs.init('Ym3J0TMUVFtln0W9Y');
 
     emailjs
       .send(
@@ -40,7 +42,7 @@ export const ContactUs = () => {
           console.log(result.text);
           setFormdata({
             loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
+            alertmessage: "Thank you for your interest! I will respond as soon as I can.",
             variant: "success",
             show: true,
           });
@@ -69,7 +71,7 @@ export const ContactUs = () => {
       <Container>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>{meta.title} | Contact</title>
+          <title> Contact | {meta.title} </title>
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
@@ -109,7 +111,6 @@ export const ContactUs = () => {
                 ""
               )}
             </address>
-            <p>{contactConfig.description}</p>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <form onSubmit={handleSubmit} className="contact__form w-100">
