@@ -35,7 +35,7 @@ const aboutDocuments = [
         title: "Bachelor's Degree Transcript"
     },
     {
-        link: require("./assets/images/Resume_KevinChenier_v2.PNG"),
+        link: require("./assets/images/Resume_KevinChenier_v3.PNG"),
         title: "Resume"
     },
     {
