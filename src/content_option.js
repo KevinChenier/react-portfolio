@@ -341,7 +341,7 @@ const dataportfolio = [
     },
     {
         title: "VR Treadmill",
-        githubLink: "https://github.com/KevinChenier/DetectVR/tree/master/Assets",
+        githubLink: "https://github.com/KevinChenier/DetectVR/tree/master/Assets/UserInterface/Scripts",
         img: require('./assets/images/treadmill_photo1.png'),
         description: "Hack a treadmill and use it as a gaming device for virtual reality games.",
         link: "/portfolio/vrtreadmill",
