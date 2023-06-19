@@ -286,6 +286,7 @@ const services = [{
 const dataportfolio = [
     {
         title: "Holo Puncture",
+        githubLink: "",
         img: require('./assets/images/holo_photo1.png'),
         description: "Assist cardiologists in visualizing the heart of a patient with a ventricular septal defect so that they can perform a single heart puncture to occlude the defect.",
         link: "/portfolio/holopuncture",
@@ -311,6 +312,7 @@ const dataportfolio = [
     },
     {
         title: "Pointing Avatar",
+        githubLink: "https://github.com/KevinChenier/PointingAvatar/tree/master/Assets/Scripts",
         img: require('./assets/images/pointingavatar_photo1.png'),
         description: "Replicate a user's movements with an avatar and apply modifications to extension/abduction movements.",
         link: "/portfolio/pointingavatar",
@@ -339,6 +341,7 @@ const dataportfolio = [
     },
     {
         title: "VR Treadmill",
+        githubLink: "https://github.com/KevinChenier/DetectVR/tree/master/Assets",
         img: require('./assets/images/treadmill_photo1.png'),
         description: "Hack a treadmill and use it as a gaming device for virtual reality games.",
         link: "/portfolio/vrtreadmill",
@@ -364,6 +367,7 @@ const dataportfolio = [
     },
     {
         title: "Avator",
+        githubLink: "",
         img: require('./assets/images/avator_photo1.png'),
         description: "Create a simulated classroom environment where an avatar interacts with you in real-time.",
         link: "/portfolio/avator",
@@ -392,6 +396,7 @@ const dataportfolio = [
     },
     {
         title: "Chemistry Lab",
+        githubLink: "",
         img: require('./assets/images/chimie_photo1.png'),
         description: "Simulate chemistry lab experiments typically conducted in a school setting so that students can perform them remotely.",
         link: "/portfolio/chemistrylab",
@@ -413,6 +418,7 @@ const dataportfolio = [
     },
     {
         title: "Ataxia Tools",
+        githubLink: "https://github.com/KevinChenier/AtaxieTools/tree/master/Assets/Scripts",
         img: require('./assets/images/ataxie_photo1.png'),
         description: "Assess the progression of Friedreich's Ataxia with the help of virtual reality, eye-tracking technology and machine learning.",
         link: "/portfolio/ataxiatools",
@@ -444,6 +450,7 @@ const dataportfolio = [
     },
     {
         title: "Horror Game",
+        githubLink: "https://github.com/KevinChenier/HorrorGame/tree/master/Source",
         img: require('./assets/images/foxtrotte_photo1.png'),
         description: "Develop an horror survival game.",
         link: "/portfolio/horrorgame",
@@ -466,6 +473,7 @@ const dataportfolio = [
     },
     {
         title: "Hovercraft",
+        githubLink: "",
         img: require('./assets/images/aero_photo1.png'),
         description: "Build an hovercraft for competition purposes.",
         link: "/portfolio/hovercraft",
@@ -487,6 +495,7 @@ const dataportfolio = [
     },
     {
         title: "Concert VR",
+        githubLink: "",
         img: require('./assets/images/concertvr_photo1.png'),
         description: "Immerse users in a singing competition experience.",
         link: "/portfolio/concertvr",
@@ -510,6 +519,7 @@ const dataportfolio = [
     },
     {
         title: "Unknown 9: Awakening",
+        githubLink: "",
         img: require('./assets/images/u9_photo1.jpg'),
         description: "Develop an upcoming Reflector Entertainment RPG game, to be published by Bandai Namco Entertainment.",
         link: "/portfolio/unknown9awakening",
@@ -531,6 +541,7 @@ const dataportfolio = [
     },
     {
         title: "Classification VR",
+        githubLink: "",
         img: require('./assets/images/classificationVR_photo1.png'),
         description: "Classify documents in virtual reality with more efficiency.",
         link: "/portfolio/vrclassification",

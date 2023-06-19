@@ -4,6 +4,10 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta, projectsTimeline } from "../../content_option";
 import { Link } from "react-router-dom";
+import { socialprofils } from "../../content_option";
+import {
+    FaGithub,
+  } from "react-icons/fa";
 
 export const PortfolioProject = (projectIndex) => {
     const projectData = dataportfolio[projectIndex];
@@ -20,8 +24,11 @@ export const PortfolioProject = (projectIndex) => {
             </Helmet>
             <Row className="mb-5 mt-3 pt-md-3">
             <Col lg="8">
-                <h1 className="display-4 mb-4"> {projectData.title} </h1>{" "}
+                <h1 className="display-4 mb-4"> {projectData.title}  </h1>{" "}
                 <hr className="t_border my-4 ml-0 text-left" />
+                
+                
+                
             </Col>
             </Row>
             <div className="mb-5 po_items_ho video-container">
@@ -31,10 +38,17 @@ export const PortfolioProject = (projectIndex) => {
                     src={projectData.youtube}
                     title="YouTube video player"
                     frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                     allowfullscreen
                 ></iframe>
-                </div>
+                {projectData.githubLink !== "" && (
+                    <p className="mb-0">
+                        <a href={projectData.githubLink} target="_blank">
+                            View Code<FaGithub />
+                        </a>
+                    </p>
+                )}
+            </div>
             <div className="text-container">
                 <h2>Context</h2>
                 <p className="mb-5">{projectData.context}</p>

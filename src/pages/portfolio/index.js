@@ -3,6 +3,9 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
+import {
+  FaGithub,
+} from "react-icons/fa";
 
 function PortfolioItem({ data }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -22,14 +25,20 @@ function PortfolioItem({ data }) {
       </div>
       <div className="content">
         <p>{data.description}</p>
-        <a>View Project</a>
+        <a className="mb-1">View Project</a>
+        {data.githubLink !== "" && (
+          <p className="mb-0">
+              <a href={data.githubLink}  target="_blank">
+                View Code<FaGithub />
+              </a>
+          </p>
+        )}
       </div>
     </a>
   );
 }
 
 export const Portfolio = () => {
-  
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -43,6 +52,9 @@ export const Portfolio = () => {
             <h1 className="display-4 mb-4"> Portfolio </h1>{" "}
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
+        </Row>
+        <Row className="mb-5 mt-3 pt-md-3">
+        <h1 className="display-5 mb-4"> Select the ones that interest you!</h1>{" "}
         </Row>
         <div className="mb-5 po_items_ho">
           {dataportfolio.map((data, i) => (
