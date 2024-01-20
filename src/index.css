@@ -1,4 +1,5 @@
 :root {
+    --bg-image: url('assets/images/subtle-prism_black.svg');
     --bg-color: #0c0c0c;
     --primary-color: #0d0d0d;
     --secondary-color: #fff;
@@ -9,6 +10,7 @@
 }
 
 [data-theme="light"] {
+    --bg-image: url('assets/images/subtle-prism_white.svg');
     --bg-color: #fbfbfb;
     --primary-color: #fbfbfb;
     --secondary-color: #000;
@@ -29,6 +31,7 @@ body {
     overflow-x: hidden;
     overflow-y: visible;
     background-color: var(--bg-color);
+    background-image: var(--bg-image);
     color: var(--text-color);
     font-family: 'Raleway', sans-serif;
     -webkit-font-smoothing: antialiased;

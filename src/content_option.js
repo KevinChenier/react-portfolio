@@ -11,13 +11,13 @@ const introdata = {
         second: "\"If the universe is a simulation with its laws and constants, then the mathematics is its code and a physicist is a programmer.\"",
         third: "\"Should we be more afraid of a computer passing the Turing Test, or one that already intentionnally fails it?\"",
     },
-    description: "I'm a graduate in Software Engineering at École de technologie supérieure, currently completing a master's degree in Healthcare Technologies. Whether it's creating complex 3D environments, building a website, developing a mobile app or bringing real-world applications into life with robotics, programming has helped me turn ideas into tangible, functional realities.",
+    description: "I am an enthusiastic and committed individual with a strong scientific background, and I have developed a deep fascination for state-of-the-art technologies like virtual/augmented reality, machine learning, and gamification. I have gained extensive experience developing various projects from inception for healthcare/academia purposes through various game engines. My primary areas of interest lie in the fields of gaming, healthcare, and finance.",
     your_img_url: require('./assets/images/gamingroom.png'),
 };
 
 const dataabout = {
     title: "abit about my self",
-    resume: require("./assets/images/Resume_KevinChenier_v2.PNG"),
+    resume: require("./assets/images/Resume_KevinChenier_v5.PNG"),
     notesbac: require("./assets/images/NotesBac.png"),
     notesbac2: require("./assets/images/NotesBac2.png"),
     notesmaitrise: require("./assets/images/NotesMaitrise.png"),
@@ -35,7 +35,7 @@ const aboutDocuments = [
         title: "Bachelor's Degree Transcript"
     },
     {
-        link: require("./assets/images/Resume_KevinChenier_v3.PNG"),
+        link: require("./assets/images/Resume_KevinChenier_v5.PNG"),
         title: "Resume"
     },
     {
@@ -266,6 +266,10 @@ const additionalLogos = [
     {
         title: "iFacialMocap",
         link: require('./assets/images/ifacialmocap.jpg')
+    },
+    {
+        title: "Scikit-Learn",
+        link: require('./assets/images/scikit-learn.png')
     }
 ]
 
@@ -438,12 +442,12 @@ const dataportfolio = [
             logos.find(logo => logo.title === "C#"),
             logos.find(logo => logo.title === "MATLAB"),
             logos.find(logo => logo.title === "Python"),
-            additionalLogos.find(logo => logo.title === "R"),
+            additionalLogos.find(logo => logo.title === "Scikit-Learn"),
+            logos.find(logo => logo.title === "PyTorch"),
             logos.find(logo => logo.title === "Git"),
             additionalLogos.find(logo => logo.title === "Excel"),
             additionalLogos.find(logo => logo.title === "Visual Studio"),
             additionalLogos.find(logo => logo.title === "PyCharm"),
-            logos.find(logo => logo.title === "PyTorch"),
             additionalLogos.find(logo => logo.title === "MakeHuman")
         ],
         features: ["Algorithm to calculate number of Square Wave Jerks, with their characteristics.", "Algorithm to calculate the number of saccades, with their characteristics.", "Machine learning developed to try to predict the FARS score based on virtual reality extracted metrics.", "For further information, read our pusblished scientific paper: Pre-validation of a Virtual Reality Tool to Quantify the Progression of Friedreich’s Ataxia "]
