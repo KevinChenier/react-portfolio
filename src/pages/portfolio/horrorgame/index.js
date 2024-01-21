@@ -2,5 +2,5 @@ import "../portfolioprojectstyle.css";
 import { PortfolioProject } from '../portfolioproject';
 
 export const HorrorGame = () => {
-  return PortfolioProject(4);
+  return PortfolioProject(6);
 };

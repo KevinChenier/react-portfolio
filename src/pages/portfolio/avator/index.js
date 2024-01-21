@@ -2,5 +2,5 @@ import "../portfolioprojectstyle.css";
 import { PortfolioProject } from '../portfolioproject';
 
 export const Avator = () => {
-  return PortfolioProject(5);
+  return PortfolioProject(3);
 };

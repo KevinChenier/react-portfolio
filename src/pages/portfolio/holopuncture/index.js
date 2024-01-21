@@ -2,5 +2,5 @@ import "../portfolioprojectstyle.css";
 import { PortfolioProject } from '../portfolioproject';
 
 export const HoloPuncture = () => {
-  return PortfolioProject(2);
+  return PortfolioProject(5);
 };

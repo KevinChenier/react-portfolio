@@ -341,32 +341,7 @@ const dataportfolio = [
         ],
         features: ["Control crowd mood and reactions.", "Control which questions the judges will ask."],
     },
-    {
-        title: "Holo Puncture",
-        githubLink: "",
-        img: require('./assets/images/holo_photo1.png'),
-        description: "Assist cardiologists in visualizing the heart of a patient with a ventricular septal defect so that they can perform a single heart puncture to occlude the defect.",
-        link: "/portfolio/holopuncture",
-        bw_image: require('./assets/images/holo_photo1_bw.jpg'),
-
-        //video: require("./assets/videos/holopuncture.mp4"),
-        youtube: "https://www.youtube.com/embed/pVAWjNC6XwA",
-        context: "Utilizing mixed reality technology, the objective was to provide assistance to CHU Sainte-Justine cardiologists in effectively visualizing the heart of patients afflicted with a ventricular septal defect. The purpose of this project was to enable the medical professionals to perform a single cardiac puncture procedure to effectively occlude the defect, thereby eliminating the need for multiple interventions.",
-        challenges: "At first, the prototype encountered performance challenges, as it struggled to achieve a maximum frame rate of 10 frames per second. This limitation was primarily due to the high complexity of the visual representation of the heart, which was directly extracted from 3DimViewer. As a result, using the prototype became arduous for users and even caused headaches.",
-        results: "By optimizing the heart model through a reduction in the number of triangles while preserving its intricate details, the target frame rate has been successfully increased to 20 frames per second and was now suitable for testing. The surgeons did not encounter any significant challenges related to cyber sickness, usability, or performance. They provided valuable input and specific guidelines to enhance the augmented reality heart with additional complex functionalities tailored to medical practice.",
-        technologies: [
-            logos.find(logo => logo.title === "Hololens 2"),
-            logos.find(logo => logo.title === "Unity"),
-            logos.find(logo => logo.title === "C#"),
-            logos.find(logo => logo.title === "Blender"),
-            logos.find(logo => logo.title === "Git"),
-            additionalLogos.find(logo => logo.title === "Visual Studio"),
-            additionalLogos.find(logo => logo.title === "Excel"),
-            additionalLogos.find(logo => logo.title === "MeshLab"),
-            additionalLogos.find(logo => logo.title === "3DimViewer")
-        ],
-        features: ["The transparency shader varies based on the distance between the heart and the position of the needle.", "Utilizes Universal Render Pipeline.", "Mixed Reality Toolkit is used for manipulating the heart and needle.", "Puncture coordinates calculated when needle touches the surface of the heart, and saved in Excel file located on the headset directory."],
-    },
+    
     {
         title: "Chemistry Lab",
         githubLink: "",
@@ -388,29 +363,6 @@ const dataportfolio = [
             logos.find(logo => logo.title === "Blender")
         ],
         features: ["Manipulation of 3D objects (molecules and atoms) with the mouse cursor.", "Can move in the scene to change the experiment.", "The progress made by students was saved within the game, eliminating the need for them to restart from the beginning each time they accessed it."]
-    },
-    {
-        title: "Horror Game",
-        githubLink: "https://github.com/KevinChenier/HorrorGame/tree/master/Source",
-        img: require('./assets/images/foxtrotte_photo1.png'),
-        description: "Develop an horror survival game.",
-        link: "/portfolio/horrorgame",
-        bw_image: require('./assets/images/foxtrotte_photo1_bw.jpg'),
-
-        //video: require("./assets/videos/foxtrotte.mp4"),
-        youtube: "https://www.youtube.com/embed/RCldB7i0Ocs",
-        context: "As a school project of 4 students, we were tasked to create a game from inception with various functionalities. Our game could be classified as a role-playing horror game. You play as a fox trying to find your babies scattered around the map, while there are dangerous hunters looking for you. As I was the most experienced with game engines in my team, I took on the majority of the functionnalities, which includes animatimg the hunters, the map design, the AI behaviour, the performance issues, the production of music and overall sound ambiance.",
-        challenges: "Some areas of the map required optimization as they were performing below 30 frames per second. The process of building the lighting for the map also presented challenges, taking approximately 8 hours to complete. Many techniques were used to better the performance. The implementation of the hunter's Blackboard system posed another challenge. I had to create multiple states to control the hunter's behavior, including modes for roaming the map, responding to player sounds, searching for the player, and engaging in combat when the player is spotted. This system required coordination with the hunter character blueprint and its animation blueprint to enable the hunter to change stances, adjust speed, and modify behavior in combat situations.",
-        results: "The game is currently playable, but further optimization is needed to achieve a higher frame rate on the most demanding section of the map. Currently, the game maintains a minimum frame rate of 50 fps, which is relatively low and requires additional optimization efforts. The objective of the game is to locate and rescue 10 babies, after which the player must find an extraction point to successfully complete the game.",
-        technologies: [
-            logos.find(logo => logo.title === "Unreal Engine"),
-            logos.find(logo => logo.title === "Blender"),
-            logos.find(logo => logo.title === "C++"),
-            additionalLogos.find(logo => logo.title === "Visual Studio"),
-            additionalLogos.find(logo => logo.title === "Logic Pro X"),
-            logos.find(logo => logo.title === "Git"),
-        ],
-        features: ["Scary and immersive environment.", "Fully functional AI with logical behaviour.", "Weather system.", "Custom music produced in Logic Pro X.", "Enemies and the extraction point are dynamically generated and spawned throughout the map at the start."]
     },
     {
         title: "Avator",
@@ -472,6 +424,55 @@ const dataportfolio = [
             additionalLogos.find(logo => logo.title === "MakeHuman")
         ],
         features: ["Algorithm to calculate number of Square Wave Jerks, with their characteristics.", "Algorithm to calculate the number of saccades, with their characteristics.", "Machine learning developed to try to predict the FARS score based on virtual reality extracted metrics.", "For further information, read our pusblished scientific paper: Pre-validation of a Virtual Reality Tool to Quantify the Progression of Friedreich’s Ataxia "]
+    },
+    {
+        title: "Holo Puncture",
+        githubLink: "",
+        img: require('./assets/images/holo_photo1.png'),
+        description: "Assist cardiologists in visualizing the heart of a patient with a ventricular septal defect so that they can perform a single heart puncture to occlude the defect.",
+        link: "/portfolio/holopuncture",
+        bw_image: require('./assets/images/holo_photo1_bw.jpg'),
+
+        //video: require("./assets/videos/holopuncture.mp4"),
+        youtube: "https://www.youtube.com/embed/pVAWjNC6XwA",
+        context: "Utilizing mixed reality technology, the objective was to provide assistance to CHU Sainte-Justine cardiologists in effectively visualizing the heart of patients afflicted with a ventricular septal defect. The purpose of this project was to enable the medical professionals to perform a single cardiac puncture procedure to effectively occlude the defect, thereby eliminating the need for multiple interventions.",
+        challenges: "At first, the prototype encountered performance challenges, as it struggled to achieve a maximum frame rate of 10 frames per second. This limitation was primarily due to the high complexity of the visual representation of the heart, which was directly extracted from 3DimViewer. As a result, using the prototype became arduous for users and even caused headaches.",
+        results: "By optimizing the heart model through a reduction in the number of triangles while preserving its intricate details, the target frame rate has been successfully increased to 20 frames per second and was now suitable for testing. The surgeons did not encounter any significant challenges related to cyber sickness, usability, or performance. They provided valuable input and specific guidelines to enhance the augmented reality heart with additional complex functionalities tailored to medical practice.",
+        technologies: [
+            logos.find(logo => logo.title === "Hololens 2"),
+            logos.find(logo => logo.title === "Unity"),
+            logos.find(logo => logo.title === "C#"),
+            logos.find(logo => logo.title === "Blender"),
+            logos.find(logo => logo.title === "Git"),
+            additionalLogos.find(logo => logo.title === "Visual Studio"),
+            additionalLogos.find(logo => logo.title === "Excel"),
+            additionalLogos.find(logo => logo.title === "MeshLab"),
+            additionalLogos.find(logo => logo.title === "3DimViewer")
+        ],
+        features: ["The transparency shader varies based on the distance between the heart and the position of the needle.", "Utilizes Universal Render Pipeline.", "Mixed Reality Toolkit is used for manipulating the heart and needle.", "Puncture coordinates calculated when needle touches the surface of the heart, and saved in Excel file located on the headset directory."],
+    },
+    {
+        title: "Horror Game",
+        githubLink: "https://github.com/KevinChenier/HorrorGame/tree/master/Source",
+        img: require('./assets/images/foxtrotte_photo1.png'),
+        description: "Develop an horror survival game.",
+        link: "/portfolio/horrorgame",
+        bw_image: require('./assets/images/foxtrotte_photo1_bw.jpg'),
+
+        //video: require("./assets/videos/foxtrotte.mp4"),
+        youtube: "https://www.youtube.com/embed/RCldB7i0Ocs",
+        context: "As a school project of 4 students, we were tasked to create a game from inception with various functionalities. Our game could be classified as a role-playing horror game. You play as a fox trying to find your babies scattered around the map, while there are dangerous hunters looking for you. As I was the most experienced with game engines in my team, I took on the majority of the functionnalities, which includes animatimg the hunters, the map design, the AI behaviour, the performance issues, the production of music and overall sound ambiance.",
+        challenges: "Some areas of the map required optimization as they were performing below 30 frames per second. The process of building the lighting for the map also presented challenges, taking approximately 8 hours to complete. Many techniques were used to better the performance. The implementation of the hunter's Blackboard system posed another challenge. I had to create multiple states to control the hunter's behavior, including modes for roaming the map, responding to player sounds, searching for the player, and engaging in combat when the player is spotted. This system required coordination with the hunter character blueprint and its animation blueprint to enable the hunter to change stances, adjust speed, and modify behavior in combat situations.",
+        results: "The game is currently playable, but further optimization is needed to achieve a higher frame rate on the most demanding section of the map. Currently, the game maintains a minimum frame rate of 50 fps, which is relatively low and requires additional optimization efforts. The objective of the game is to locate and rescue 10 babies, after which the player must find an extraction point to successfully complete the game.",
+        technologies: [
+            logos.find(logo => logo.title === "Unreal Engine"),
+            logos.find(logo => logo.title === "Blender"),
+            logos.find(logo => logo.title === "C++"),
+            additionalLogos.find(logo => logo.title === "Visual Studio"),
+            additionalLogos.find(logo => logo.title === "Logic Pro X"),
+            logos.find(logo => logo.title === "Git"),
+        ],
+        features: ["Scary and immersive environment.", "Fully functional AI with logical behaviour.", "Weather system.", "Custom music produced in Logic Pro X.", "Enemies and the extraction point are dynamically generated and spawned throughout the map at the start."]
     },
     {
         title: "Unknown 9: Awakening",
@@ -569,19 +570,7 @@ const dataportfolio = [
     }
 ];
 
-const projectsTimeline = [
-    "/portfolio/hovercraft", 
-    "/portfolio/vrclassification", 
-    "/portfolio/vrtreadmill", 
-    "/portfolio/unknown9awakening", 
-    "/portfolio/ataxiatools", 
-    "/portfolio/avator", 
-    "/portfolio/horrorgame", 
-    "/portfolio/chemistryLab", 
-    "/portfolio/holopuncture", 
-    "/portfolio/concertVR", 
-    "/portfolio/pointingavatar"
-]
+const projectsTimeline = dataportfolio.map(data => data.link).reverse();
 
 const contactConfig = {
     YOUR_EMAIL: "email@kevinchenierdev.site",
