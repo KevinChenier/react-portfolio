@@ -23,8 +23,6 @@ function PortfolioItem({ data, index }) {
 
   return (
     <div className={timelineItemClass}>
-      <div class="timeline__item__inner">
-        <div class="timeline__content__wrap">
           <div className="timeline__content ">
             <a href={data.link} className="po_item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               <div className="image-container">
@@ -43,8 +41,6 @@ function PortfolioItem({ data, index }) {
                 </div>
             </a>
           </div>
-        </div>
-      </div>
     </div>
   );
 }
