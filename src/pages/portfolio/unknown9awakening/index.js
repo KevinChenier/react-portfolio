@@ -2,5 +2,5 @@ import "../portfolioprojectstyle.css";
 import { PortfolioProject } from '../portfolioproject';
 
 export const Unknown9Awakening = () => {
-  return PortfolioProject(9);
+  return PortfolioProject(7);
 };

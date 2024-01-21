@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import "./style.css";
+import React, { useState  } from 'react';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
-import {
-  FaGithub,
-} from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import '../../timeline/dist/css/timeline.min.css'; 
+import "./style.css";
 
-function PortfolioItem({ data }) {
+
+function PortfolioItem({ data, index }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -18,27 +18,40 @@ function PortfolioItem({ data }) {
     setIsHovered(false);
   };
 
+  // Determine the timeline item class based on the index
+  const timelineItemClass = index % 2 === 0 ? "timeline__item  timeline__item--left" : "timeline__item  timeline__item--right";
+
   return (
-    <a href={data.link} className="po_item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <div className="image-container">
-        <img src={isHovered ? data.img : data.bw_image} alt="" />
+    <div className={timelineItemClass}>
+      <div class="timeline__item__inner">
+        <div class="timeline__content__wrap">
+          <div className="timeline__content ">
+            <a href={data.link} className="po_item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <div className="image-container">
+                <img src={isHovered ? data.img : data.bw_image} alt="" />
+              </div>
+                <div className="content">
+                  <p>{data.description}</p>
+                  <a className="mb-1">View Project</a>
+                    {data.githubLink !== "" && (
+                      <p className="mb-0">
+                        <a href={data.githubLink} target="_blank">
+                          View Code<FaGithub />
+                        </a>
+                      </p>
+                    )}
+                </div>
+            </a>
+          </div>
+        </div>
       </div>
-      <div className="content">
-        <p>{data.description}</p>
-        <a className="mb-1">View Project</a>
-        {data.githubLink !== "" && (
-          <p className="mb-0">
-              <a href={data.githubLink}  target="_blank">
-                View Code<FaGithub />
-              </a>
-          </p>
-        )}
-      </div>
-    </a>
+    </div>
   );
 }
 
 export const Portfolio = () => {
+
+
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -54,12 +67,16 @@ export const Portfolio = () => {
           </Col>
         </Row>
         <Row className="mb-5 mt-3 pt-md-3">
-        <h1 className="display-5 mb-4"> Select the ones that interest you!</h1>{" "}
+          <h1 className="display-5 mb-4"> Select the ones that interest you!</h1>{" "}
         </Row>
-        <div className="mb-5 po_items_ho">
-          {dataportfolio.map((data, i) => (
-            <PortfolioItem key={i} data={data} />
-          ))}
+        <div className="timeline timeline--loaded" id="timeline-horizontal">
+          <div className="timeline__wrap">
+            <div className="timeline__items">
+              {dataportfolio.map((data, i) => (
+                <PortfolioItem key={i} data={data} index={i}/>
+              ))}
+            </div>
+          </div>
         </div>
       </Container>
     </HelmetProvider>

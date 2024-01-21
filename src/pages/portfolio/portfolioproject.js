@@ -26,9 +26,6 @@ export const PortfolioProject = (projectIndex) => {
             <Col lg="8">
                 <h1 className="display-4 mb-4"> {projectData.title}  </h1>{" "}
                 <hr className="t_border my-4 ml-0 text-left" />
-                
-                
-                
             </Col>
             </Row>
             <div className="mb-5 po_items_ho video-container">

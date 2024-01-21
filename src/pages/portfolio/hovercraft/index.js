@@ -2,5 +2,5 @@ import "../portfolioprojectstyle.css";
 import { PortfolioProject } from '../portfolioproject';
 
 export const Hovercraft = () => {
-  return PortfolioProject(7);
+  return PortfolioProject(10);
 };

@@ -289,32 +289,6 @@ const services = [{
 
 const dataportfolio = [
     {
-        title: "Holo Puncture",
-        githubLink: "",
-        img: require('./assets/images/holo_photo1.png'),
-        description: "Assist cardiologists in visualizing the heart of a patient with a ventricular septal defect so that they can perform a single heart puncture to occlude the defect.",
-        link: "/portfolio/holopuncture",
-        bw_image: require('./assets/images/holo_photo1_bw.jpg'),
-
-        //video: require("./assets/videos/holopuncture.mp4"),
-        youtube: "https://www.youtube.com/embed/pVAWjNC6XwA",
-        context: "Utilizing mixed reality technology, the objective was to provide assistance to CHU Sainte-Justine cardiologists in effectively visualizing the heart of patients afflicted with a ventricular septal defect. The purpose of this project was to enable the medical professionals to perform a single cardiac puncture procedure to effectively occlude the defect, thereby eliminating the need for multiple interventions.",
-        challenges: "At first, the prototype encountered performance challenges, as it struggled to achieve a maximum frame rate of 10 frames per second. This limitation was primarily due to the high complexity of the visual representation of the heart, which was directly extracted from 3DimViewer. As a result, using the prototype became arduous for users and even caused headaches.",
-        results: "By optimizing the heart model through a reduction in the number of triangles while preserving its intricate details, the target frame rate has been successfully increased to 20 frames per second and was now suitable for testing. The surgeons did not encounter any significant challenges related to cyber sickness, usability, or performance. They provided valuable input and specific guidelines to enhance the augmented reality heart with additional complex functionalities tailored to medical practice.",
-        technologies: [
-            logos.find(logo => logo.title === "Hololens 2"),
-            logos.find(logo => logo.title === "Unity"),
-            logos.find(logo => logo.title === "C#"),
-            logos.find(logo => logo.title === "Blender"),
-            logos.find(logo => logo.title === "Git"),
-            additionalLogos.find(logo => logo.title === "Visual Studio"),
-            additionalLogos.find(logo => logo.title === "Excel"),
-            additionalLogos.find(logo => logo.title === "MeshLab"),
-            additionalLogos.find(logo => logo.title === "3DimViewer")
-        ],
-        features: ["The transparency shader varies based on the distance between the heart and the position of the needle.", "Utilizes Universal Render Pipeline.", "Mixed Reality Toolkit is used for manipulating the heart and needle.", "Puncture coordinates calculated when needle touches the surface of the heart, and saved in Excel file located on the headset directory."],
-    },
-    {
         title: "Pointing Avatar",
         githubLink: "https://github.com/KevinChenier/PointingAvatar/tree/master/Assets/Scripts",
         img: require('./assets/images/pointingavatar_photo1.png'),
@@ -344,30 +318,99 @@ const dataportfolio = [
         features: ["Integrate the target positions provided in an Excel worksheet file.", "Establish a communication link between Unity and Arduino to transmit signals, which are then relayed to vibrators connected to LabVIEW software.", "Read from an .fbx file to generate the MetaHuman avatar directly with the participant body measures", "Implemented a sophisticated protocol with various selectable options, expressed in CSV format, and transmitted directly to the application to create custom protocol steps for each user."],
     },
     {
-        title: "VR Treadmill",
-        githubLink: "https://github.com/KevinChenier/DetectVR/tree/master/Assets/UserInterface/Scripts",
-        img: require('./assets/images/treadmill_photo1.png'),
-        description: "Hack a treadmill and use it as a gaming device for virtual reality games.",
-        link: "/portfolio/vrtreadmill",
-        bw_image: require('./assets/images/treadmill_photo1_bw.jpg'),
+        title: "Concert VR",
+        githubLink: "",
+        img: require('./assets/images/concertvr_photo1.png'),
+        description: "Immerse users in a singing competition experience.",
+        link: "/portfolio/concertvr",
+        bw_image: require('./assets/images/concertvr_photo1_bw.jpg'),
 
-        //video: require("./assets/videos/vrtreadmill.mp4"),
-        youtube: "https://www.youtube.com/embed/jrWZ1fRFuAE",
-        context: "As of the present moment, room-scale technology is the sole method employed to provide a sensation of walking within a virtual reality environment. Since there was no readily available user-friendly solution to address this limitation, I took the initiative to develop a customized at-home solution and at the same time tackling the cybersickness problem when walking in virtual reality. By hacking my own home treadmill and implementing controller inputs, I aimed to create a genuine impression of walking within the virtual reality space.",
-        challenges: "Undertaking the task of opening up the treadmill and hacking its motor posed a significant challenge. By establishing a connection between an Arduino and the PWM pin on the treadmill's PCB, the subsequent obstacle was to establish a direct connection to the Arduino by bypassing the firmware of the controllers.",
-        results: "Consequently, I successfully achieved control over the treadmill using an Xbox controller and keyboard inputs. This enabled me to play Skyrim VR with an Xbox controller while utilizing the treadmill. However, numerous challenges persisted, particularly in terms of proprioception, as walking on a device without visual cues of one's surroundings proved to be difficult. In the realm of virtual reality, it became essential to run a Unity application that directly governed the treadmill, as bypassing the Oculus firmware was not feasible. Unfortunately, multi-application software was unavailable at the time, which meant that other games could not be played concurrently while the Unity application was running.",
+        //video: require("./assets/videos/concertvr.mp4"),
+        youtube: "https://www.youtube.com/embed/wZiU-OoKc-A",
+        context: "In collaboration with academics from the University of Quebec in Montreal, I was given the responsibility to develop an immersive application from scratch. The objective was to create an interactive singing contest experience that would fully engage the participant. The application simulated a contest environment complete with judges and a virtual crowd. The participant's task was to respond to questions posed by three judges, sharing their thoughts and feelings about the experience.",
+        challenges: "One of the most challenging aspects of this project was the recording and synchronization of facial animations with the audio provided by voice actors. Achieving precise and accurate facial animations required a significant amount of time and effort to ensure a seamless and realistic experience for the participants. Another significant challenge was striking the right balance between full immersion and performance optimization, considering the limitations of virtual reality. Maintaining a minimum frame rate of 90 frames per second was essential to prevent cybersickness and ensure a smooth and comfortable experience for the participants. This required careful optimization of the crowd animations and other visual elements to achieve a balance between visual fidelity and performance.",
+        results: "The application has achieved remarkable success, demonstrating excellent performance and stability without any noticeable issues or bugs. It is currently being utilized for data acquisition purposes, allowing researchers to gather valuable information on participants' stress levels while immersed in the virtual singing competition. This data will provide valuable insights and contribute to the evaluation of participants' reactions and experiences within the simulated contest environment. The application's seamless performance and accurate data collection make it an invaluable tool for studying and understanding the impact of immersive experiences on stress levels and overall participant engagement.",
         technologies: [
             logos.find(logo => logo.title === "Oculus"),
             logos.find(logo => logo.title === "Unity"),
             logos.find(logo => logo.title === "C#"),
+            logos.find(logo => logo.title === "Git"),
+            additionalLogos.find(logo => logo.title === "Visual Studio"),
+            additionalLogos.find(logo => logo.title === "MetaHuman Creator")
+
+        ],
+        features: ["Control crowd mood and reactions.", "Control which questions the judges will ask."],
+    },
+    {
+        title: "Holo Puncture",
+        githubLink: "",
+        img: require('./assets/images/holo_photo1.png'),
+        description: "Assist cardiologists in visualizing the heart of a patient with a ventricular septal defect so that they can perform a single heart puncture to occlude the defect.",
+        link: "/portfolio/holopuncture",
+        bw_image: require('./assets/images/holo_photo1_bw.jpg'),
+
+        //video: require("./assets/videos/holopuncture.mp4"),
+        youtube: "https://www.youtube.com/embed/pVAWjNC6XwA",
+        context: "Utilizing mixed reality technology, the objective was to provide assistance to CHU Sainte-Justine cardiologists in effectively visualizing the heart of patients afflicted with a ventricular septal defect. The purpose of this project was to enable the medical professionals to perform a single cardiac puncture procedure to effectively occlude the defect, thereby eliminating the need for multiple interventions.",
+        challenges: "At first, the prototype encountered performance challenges, as it struggled to achieve a maximum frame rate of 10 frames per second. This limitation was primarily due to the high complexity of the visual representation of the heart, which was directly extracted from 3DimViewer. As a result, using the prototype became arduous for users and even caused headaches.",
+        results: "By optimizing the heart model through a reduction in the number of triangles while preserving its intricate details, the target frame rate has been successfully increased to 20 frames per second and was now suitable for testing. The surgeons did not encounter any significant challenges related to cyber sickness, usability, or performance. They provided valuable input and specific guidelines to enhance the augmented reality heart with additional complex functionalities tailored to medical practice.",
+        technologies: [
+            logos.find(logo => logo.title === "Hololens 2"),
+            logos.find(logo => logo.title === "Unity"),
+            logos.find(logo => logo.title === "C#"),
             logos.find(logo => logo.title === "Blender"),
             logos.find(logo => logo.title === "Git"),
-            logos.find(logo => logo.title === "Python"),
             additionalLogos.find(logo => logo.title === "Visual Studio"),
-            additionalLogos.find(logo => logo.title === "PyCharm"),
-            additionalLogos.find(logo => logo.title === "Arduino")
+            additionalLogos.find(logo => logo.title === "Excel"),
+            additionalLogos.find(logo => logo.title === "MeshLab"),
+            additionalLogos.find(logo => logo.title === "3DimViewer")
         ],
-        features: ["Play Skyrim VR while walking on the treadmill.", "Control the treadmill with Xbox controller and keyboard inputs.", "While using the Unity application, it was possible to control the treadmill with the headset position, so no controllers were needed.", "Custom Unity application that lets you visit the Statue of Liberty!"]
+        features: ["The transparency shader varies based on the distance between the heart and the position of the needle.", "Utilizes Universal Render Pipeline.", "Mixed Reality Toolkit is used for manipulating the heart and needle.", "Puncture coordinates calculated when needle touches the surface of the heart, and saved in Excel file located on the headset directory."],
+    },
+    {
+        title: "Chemistry Lab",
+        githubLink: "",
+        img: require('./assets/images/chimie_photo1.png'),
+        description: "Simulate chemistry lab experiments typically conducted in a school setting so that students can perform them remotely.",
+        link: "/portfolio/chemistrylab",
+        bw_image: require('./assets/images/chimie_photo1_bw.jpg'),
+
+        //video: require("./assets/videos/jeu_chimie.mp4"),
+        youtube: "https://www.youtube.com/embed/WLijEq42tuc",
+        context: "As the COVID-19 pandemic emerged and lockdowns became inevitable, many teachers encountered significant challenges in effectively transferring their knowledge to students. In response to this issue, a chemistry teacher approached me and another student with a proposal to find a solution for teaching students how to conduct laboratory experiments. In turn, we suggested the development of a 3D environment that would simulate all the lab experiments scheduled for the semester.",
+        challenges: "Throughout the project, we successfully developed three distinct laboratory experiments, each presenting its own set of challenges. Among them, the creation and manipulation of a molecule with various atom configurations proved to be the most demanding. Ensuring optimal performance and physics simulation for every student's computer while maintaining a high-fidelity representation of reality was a paramount concern. To achieve this, we diligently optimized the environment and fine-tuned the physics system to ensure a seamless experience for all users.",
+        results: "Slightly over half of the students were able to successfully run the game on their computers, while the remaining students encountered various issues such as problems with Mac compatibility. To address this, teams were organized to ensure that at least one person per team could share their screen with others. Approximately 6% of the students found the game somewhat challenging to use, while the majority of students reported finding it easy or very easy to use. A majority of the students believed that the game significantly improved their understanding of the subject matter.",
+        technologies: [
+            logos.find(logo => logo.title === "Unreal Engine"),
+            logos.find(logo => logo.title === "C++"),
+            logos.find(logo => logo.title === "Git"),
+            additionalLogos.find(logo => logo.title === "Visual Studio"),
+            logos.find(logo => logo.title === "Blender")
+        ],
+        features: ["Manipulation of 3D objects (molecules and atoms) with the mouse cursor.", "Can move in the scene to change the experiment.", "The progress made by students was saved within the game, eliminating the need for them to restart from the beginning each time they accessed it."]
+    },
+    {
+        title: "Horror Game",
+        githubLink: "https://github.com/KevinChenier/HorrorGame/tree/master/Source",
+        img: require('./assets/images/foxtrotte_photo1.png'),
+        description: "Develop an horror survival game.",
+        link: "/portfolio/horrorgame",
+        bw_image: require('./assets/images/foxtrotte_photo1_bw.jpg'),
+
+        //video: require("./assets/videos/foxtrotte.mp4"),
+        youtube: "https://www.youtube.com/embed/RCldB7i0Ocs",
+        context: "As a school project of 4 students, we were tasked to create a game from inception with various functionalities. Our game could be classified as a role-playing horror game. You play as a fox trying to find your babies scattered around the map, while there are dangerous hunters looking for you. As I was the most experienced with game engines in my team, I took on the majority of the functionnalities, which includes animatimg the hunters, the map design, the AI behaviour, the performance issues, the production of music and overall sound ambiance.",
+        challenges: "Some areas of the map required optimization as they were performing below 30 frames per second. The process of building the lighting for the map also presented challenges, taking approximately 8 hours to complete. Many techniques were used to better the performance. The implementation of the hunter's Blackboard system posed another challenge. I had to create multiple states to control the hunter's behavior, including modes for roaming the map, responding to player sounds, searching for the player, and engaging in combat when the player is spotted. This system required coordination with the hunter character blueprint and its animation blueprint to enable the hunter to change stances, adjust speed, and modify behavior in combat situations.",
+        results: "The game is currently playable, but further optimization is needed to achieve a higher frame rate on the most demanding section of the map. Currently, the game maintains a minimum frame rate of 50 fps, which is relatively low and requires additional optimization efforts. The objective of the game is to locate and rescue 10 babies, after which the player must find an extraction point to successfully complete the game.",
+        technologies: [
+            logos.find(logo => logo.title === "Unreal Engine"),
+            logos.find(logo => logo.title === "Blender"),
+            logos.find(logo => logo.title === "C++"),
+            additionalLogos.find(logo => logo.title === "Visual Studio"),
+            additionalLogos.find(logo => logo.title === "Logic Pro X"),
+            logos.find(logo => logo.title === "Git"),
+        ],
+        features: ["Scary and immersive environment.", "Fully functional AI with logical behaviour.", "Weather system.", "Custom music produced in Logic Pro X.", "Enemies and the extraction point are dynamically generated and spawned throughout the map at the start."]
     },
     {
         title: "Avator",
@@ -397,28 +440,6 @@ const dataportfolio = [
 
         ],
         features: ["Able to choose from a selection of characters to animate in real-time.", "Realistic and highly detailed characters are presented, which immerses the young individuals furthermore.", "Able to modify your voice tonality, so that when you choose a kid avatar, the voice that the participant will hear is accurately represented."]
-    },
-    {
-        title: "Chemistry Lab",
-        githubLink: "",
-        img: require('./assets/images/chimie_photo1.png'),
-        description: "Simulate chemistry lab experiments typically conducted in a school setting so that students can perform them remotely.",
-        link: "/portfolio/chemistrylab",
-        bw_image: require('./assets/images/chimie_photo1_bw.jpg'),
-
-        //video: require("./assets/videos/jeu_chimie.mp4"),
-        youtube: "https://www.youtube.com/embed/WLijEq42tuc",
-        context: "As the COVID-19 pandemic emerged and lockdowns became inevitable, many teachers encountered significant challenges in effectively transferring their knowledge to students. In response to this issue, a chemistry teacher approached me and another student with a proposal to find a solution for teaching students how to conduct laboratory experiments. In turn, we suggested the development of a 3D environment that would simulate all the lab experiments scheduled for the semester.",
-        challenges: "Throughout the project, we successfully developed three distinct laboratory experiments, each presenting its own set of challenges. Among them, the creation and manipulation of a molecule with various atom configurations proved to be the most demanding. Ensuring optimal performance and physics simulation for every student's computer while maintaining a high-fidelity representation of reality was a paramount concern. To achieve this, we diligently optimized the environment and fine-tuned the physics system to ensure a seamless experience for all users.",
-        results: "Slightly over half of the students were able to successfully run the game on their computers, while the remaining students encountered various issues such as problems with Mac compatibility. To address this, teams were organized to ensure that at least one person per team could share their screen with others. Approximately 6% of the students found the game somewhat challenging to use, while the majority of students reported finding it easy or very easy to use. A majority of the students believed that the game significantly improved their understanding of the subject matter.",
-        technologies: [
-            logos.find(logo => logo.title === "Unreal Engine"),
-            logos.find(logo => logo.title === "C++"),
-            logos.find(logo => logo.title === "Git"),
-            additionalLogos.find(logo => logo.title === "Visual Studio"),
-            logos.find(logo => logo.title === "Blender")
-        ],
-        features: ["Manipulation of 3D objects (molecules and atoms) with the mouse cursor.", "Can move in the scene to change the experiment.", "The progress made by students was saved within the game, eliminating the need for them to restart from the beginning each time they accessed it."]
     },
     {
         title: "Ataxia Tools",
@@ -453,75 +474,6 @@ const dataportfolio = [
         features: ["Algorithm to calculate number of Square Wave Jerks, with their characteristics.", "Algorithm to calculate the number of saccades, with their characteristics.", "Machine learning developed to try to predict the FARS score based on virtual reality extracted metrics.", "For further information, read our pusblished scientific paper: Pre-validation of a Virtual Reality Tool to Quantify the Progression of Friedreich’s Ataxia "]
     },
     {
-        title: "Horror Game",
-        githubLink: "https://github.com/KevinChenier/HorrorGame/tree/master/Source",
-        img: require('./assets/images/foxtrotte_photo1.png'),
-        description: "Develop an horror survival game.",
-        link: "/portfolio/horrorgame",
-        bw_image: require('./assets/images/foxtrotte_photo1_bw.jpg'),
-
-        //video: require("./assets/videos/foxtrotte.mp4"),
-        youtube: "https://www.youtube.com/embed/RCldB7i0Ocs",
-        context: "As a school project of 4 students, we were tasked to create a game from inception with various functionalities. Our game could be classified as a role-playing horror game. You play as a fox trying to find your babies scattered around the map, while there are dangerous hunters looking for you. As I was the most experienced with game engines in my team, I took on the majority of the functionnalities, which includes animatimg the hunters, the map design, the AI behaviour, the performance issues, the production of music and overall sound ambiance.",
-        challenges: "Some areas of the map required optimization as they were performing below 30 frames per second. The process of building the lighting for the map also presented challenges, taking approximately 8 hours to complete. Many techniques were used to better the performance. The implementation of the hunter's Blackboard system posed another challenge. I had to create multiple states to control the hunter's behavior, including modes for roaming the map, responding to player sounds, searching for the player, and engaging in combat when the player is spotted. This system required coordination with the hunter character blueprint and its animation blueprint to enable the hunter to change stances, adjust speed, and modify behavior in combat situations.",
-        results: "The game is currently playable, but further optimization is needed to achieve a higher frame rate on the most demanding section of the map. Currently, the game maintains a minimum frame rate of 50 fps, which is relatively low and requires additional optimization efforts. The objective of the game is to locate and rescue 10 babies, after which the player must find an extraction point to successfully complete the game.",
-        technologies: [
-            logos.find(logo => logo.title === "Unreal Engine"),
-            logos.find(logo => logo.title === "Blender"),
-            logos.find(logo => logo.title === "C++"),
-            additionalLogos.find(logo => logo.title === "Visual Studio"),
-            additionalLogos.find(logo => logo.title === "Logic Pro X"),
-            logos.find(logo => logo.title === "Git"),
-        ],
-        features: ["Scary and immersive environment.", "Fully functional AI with logical behaviour.", "Weather system.", "Custom music produced in Logic Pro X.", "Enemies and the extraction point are dynamically generated and spawned throughout the map at the start."]
-    },
-    {
-        title: "Hovercraft",
-        githubLink: "",
-        img: require('./assets/images/aero_photo1.png'),
-        description: "Build an hovercraft for competition purposes.",
-        link: "/portfolio/hovercraft",
-        bw_image: require('./assets/images/aero_photo1_bw.jpg'),
-
-        //video: require("./assets/videos/aero_collapse.mp4"),
-        youtube: "https://www.youtube.com/embed/mVnUDXW4LWY",
-        context: "As part of a school project, a team of five students from different engineering fields was assigned the task of constructing, developing, and optimizing a hovercraft. The objective was to compete against other students who were also enrolled in the same class, participating in various tests that evaluated the hovercraft's speed and maneuverability.",
-        challenges: "The most challenging aspect of this project revolved around optimizing the hovercraft to the best of our abilities. This involved several key components, including refining the code for optimal performance, designing a high-quality PCB (Printed Circuit Board), and creating a robust SolidWorks model that could undergo thorough testing before final assembly. These optimization efforts aimed to enhance the overall efficiency, stability, and functionality of the hovercraft, requiring careful attention to detail and a multidisciplinary approach from our team of engineers.",
-        results: "This engineering project provided us with a valuable first-hand experience in applying our skills and knowledge. We were proud to achieve a classification higher than the average of all the participating students, which was a testament to our hard work, dedication, and effective teamwork. ",
-        technologies: [
-            logos.find(logo => logo.title === "C++"),
-            additionalLogos.find(logo => logo.title === "Atmel Studio"),
-            logos.find(logo => logo.title === "SolidWorks"),
-            additionalLogos.find(logo => logo.title === "Altium Designer"),
-            logos.find(logo => logo.title === "Git"),
-        ],
-        features: ["Custom PCB designed in Altium Designer", "Hovercraft designed in SolidWorks"]
-    },
-    {
-        title: "Concert VR",
-        githubLink: "",
-        img: require('./assets/images/concertvr_photo1.png'),
-        description: "Immerse users in a singing competition experience.",
-        link: "/portfolio/concertvr",
-        bw_image: require('./assets/images/concertvr_photo1_bw.jpg'),
-
-        //video: require("./assets/videos/concertvr.mp4"),
-        youtube: "https://www.youtube.com/embed/wZiU-OoKc-A",
-        context: "In collaboration with academics from the University of Quebec in Montreal, I was given the responsibility to develop an immersive application from scratch. The objective was to create an interactive singing contest experience that would fully engage the participant. The application simulated a contest environment complete with judges and a virtual crowd. The participant's task was to respond to questions posed by three judges, sharing their thoughts and feelings about the experience.",
-        challenges: "One of the most challenging aspects of this project was the recording and synchronization of facial animations with the audio provided by voice actors. Achieving precise and accurate facial animations required a significant amount of time and effort to ensure a seamless and realistic experience for the participants. Another significant challenge was striking the right balance between full immersion and performance optimization, considering the limitations of virtual reality. Maintaining a minimum frame rate of 90 frames per second was essential to prevent cybersickness and ensure a smooth and comfortable experience for the participants. This required careful optimization of the crowd animations and other visual elements to achieve a balance between visual fidelity and performance.",
-        results: "The application has achieved remarkable success, demonstrating excellent performance and stability without any noticeable issues or bugs. It is currently being utilized for data acquisition purposes, allowing researchers to gather valuable information on participants' stress levels while immersed in the virtual singing competition. This data will provide valuable insights and contribute to the evaluation of participants' reactions and experiences within the simulated contest environment. The application's seamless performance and accurate data collection make it an invaluable tool for studying and understanding the impact of immersive experiences on stress levels and overall participant engagement.",
-        technologies: [
-            logos.find(logo => logo.title === "Oculus"),
-            logos.find(logo => logo.title === "Unity"),
-            logos.find(logo => logo.title === "C#"),
-            logos.find(logo => logo.title === "Git"),
-            additionalLogos.find(logo => logo.title === "Visual Studio"),
-            additionalLogos.find(logo => logo.title === "MetaHuman Creator")
-
-        ],
-        features: ["Control crowd mood and reactions.", "Control which questions the judges will ask."],
-    },
-    {
         title: "Unknown 9: Awakening",
         githubLink: "",
         img: require('./assets/images/u9_photo1.jpg'),
@@ -542,6 +494,32 @@ const dataportfolio = [
 
         ],
         features: ["N/A"]
+    },
+    {
+        title: "VR Treadmill",
+        githubLink: "https://github.com/KevinChenier/DetectVR/tree/master/Assets/UserInterface/Scripts",
+        img: require('./assets/images/treadmill_photo1.png'),
+        description: "Hack a treadmill and use it as a gaming device for virtual reality games.",
+        link: "/portfolio/vrtreadmill",
+        bw_image: require('./assets/images/treadmill_photo1_bw.jpg'),
+
+        //video: require("./assets/videos/vrtreadmill.mp4"),
+        youtube: "https://www.youtube.com/embed/jrWZ1fRFuAE",
+        context: "As of the present moment, room-scale technology is the sole method employed to provide a sensation of walking within a virtual reality environment. Since there was no readily available user-friendly solution to address this limitation, I took the initiative to develop a customized at-home solution and at the same time tackling the cybersickness problem when walking in virtual reality. By hacking my own home treadmill and implementing controller inputs, I aimed to create a genuine impression of walking within the virtual reality space.",
+        challenges: "Undertaking the task of opening up the treadmill and hacking its motor posed a significant challenge. By establishing a connection between an Arduino and the PWM pin on the treadmill's PCB, the subsequent obstacle was to establish a direct connection to the Arduino by bypassing the firmware of the controllers.",
+        results: "Consequently, I successfully achieved control over the treadmill using an Xbox controller and keyboard inputs. This enabled me to play Skyrim VR with an Xbox controller while utilizing the treadmill. However, numerous challenges persisted, particularly in terms of proprioception, as walking on a device without visual cues of one's surroundings proved to be difficult. In the realm of virtual reality, it became essential to run a Unity application that directly governed the treadmill, as bypassing the Oculus firmware was not feasible. Unfortunately, multi-application software was unavailable at the time, which meant that other games could not be played concurrently while the Unity application was running.",
+        technologies: [
+            logos.find(logo => logo.title === "Oculus"),
+            logos.find(logo => logo.title === "Unity"),
+            logos.find(logo => logo.title === "C#"),
+            logos.find(logo => logo.title === "Blender"),
+            logos.find(logo => logo.title === "Git"),
+            logos.find(logo => logo.title === "Python"),
+            additionalLogos.find(logo => logo.title === "Visual Studio"),
+            additionalLogos.find(logo => logo.title === "PyCharm"),
+            additionalLogos.find(logo => logo.title === "Arduino")
+        ],
+        features: ["Play Skyrim VR while walking on the treadmill.", "Control the treadmill with Xbox controller and keyboard inputs.", "While using the Unity application, it was possible to control the treadmill with the headset position, so no controllers were needed.", "Custom Unity application that lets you visit the Statue of Liberty!"]
     },
     {
         title: "Classification VR",
@@ -567,6 +545,28 @@ const dataportfolio = [
         ],
         features: ["Animated visuals to streamline the process of reorganizing invoices.", "Rotate invoices / textures.", "Group invoices together or put them in the bin.", "Retrieve and send data to a database."]
     },
+    {
+        title: "Hovercraft",
+        githubLink: "",
+        img: require('./assets/images/aero_photo1.png'),
+        description: "Build an hovercraft for competition purposes.",
+        link: "/portfolio/hovercraft",
+        bw_image: require('./assets/images/aero_photo1_bw.jpg'),
+
+        //video: require("./assets/videos/aero_collapse.mp4"),
+        youtube: "https://www.youtube.com/embed/mVnUDXW4LWY",
+        context: "As part of a school project, a team of five students from different engineering fields was assigned the task of constructing, developing, and optimizing a hovercraft. The objective was to compete against other students who were also enrolled in the same class, participating in various tests that evaluated the hovercraft's speed and maneuverability.",
+        challenges: "The most challenging aspect of this project revolved around optimizing the hovercraft to the best of our abilities. This involved several key components, including refining the code for optimal performance, designing a high-quality PCB (Printed Circuit Board), and creating a robust SolidWorks model that could undergo thorough testing before final assembly. These optimization efforts aimed to enhance the overall efficiency, stability, and functionality of the hovercraft, requiring careful attention to detail and a multidisciplinary approach from our team of engineers.",
+        results: "This engineering project provided us with a valuable first-hand experience in applying our skills and knowledge. We were proud to achieve a classification higher than the average of all the participating students, which was a testament to our hard work, dedication, and effective teamwork. ",
+        technologies: [
+            logos.find(logo => logo.title === "C++"),
+            additionalLogos.find(logo => logo.title === "Atmel Studio"),
+            logos.find(logo => logo.title === "SolidWorks"),
+            additionalLogos.find(logo => logo.title === "Altium Designer"),
+            logos.find(logo => logo.title === "Git"),
+        ],
+        features: ["Custom PCB designed in Altium Designer", "Hovercraft designed in SolidWorks"]
+    }
 ];
 
 const projectsTimeline = [
