@@ -85,7 +85,7 @@ export const Portfolio = () => {
             <div className="timeline__items" >
             <div className="timeline__item animated fadeIn">
                   <div className="date_item">
-                      2023
+                      2024
                   </div>
               </div>
             {dataportfolio.slice(0, 2).map((data, i) => (
@@ -93,10 +93,18 @@ export const Portfolio = () => {
                 ))}
             <div className="timeline__item animated fadeIn">
                   <div className="date_item">
+                      2023
+                  </div>
+              </div>
+            {dataportfolio.slice(2, 4).map((data, i) => (
+                  <PortfolioItem key={i} data={data} index={i+1}/>
+                ))}
+            <div className="timeline__item animated fadeIn">
+                  <div className="date_item">
                       2022
                   </div>
               </div>
-            {dataportfolio.slice(2, 5).map((data, i) => (
+            {dataportfolio.slice(4, 7).map((data, i) => (
                   <PortfolioItem key={i} data={data} index={i+1}/>
                 ))}
             <div className="timeline__item animated fadeIn">
@@ -104,7 +112,7 @@ export const Portfolio = () => {
                       2021
                   </div>
               </div>
-              {dataportfolio.slice(5, 7).map((data, i) => (
+              {dataportfolio.slice(7, 9).map((data, i) => (
                   <PortfolioItem key={i} data={data} index={i}/>
                 ))}
               <div className="timeline__item animated fadeIn">
@@ -112,7 +120,7 @@ export const Portfolio = () => {
                       2020
                   </div>
               </div>
-              {dataportfolio.slice(7, 9).map((data, i) => (
+              {dataportfolio.slice(9, 11).map((data, i) => (
                 <PortfolioItem key={i} data={data} index={i}/>
               ))}
               <div className="timeline__item animated fadeIn">
@@ -120,7 +128,7 @@ export const Portfolio = () => {
                       2019
                   </div>
               </div>
-              {dataportfolio.slice(9, 11).map((data, i) => (
+              {dataportfolio.slice(11, 13).map((data, i) => (
                 <PortfolioItem key={i} data={data} index={i}/>
               ))}
               <div className="timeline__item animated fadeIn">

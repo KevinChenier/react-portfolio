@@ -11,18 +11,8 @@ const introdata = {
         second: "\"If the universe is a simulation with its laws and constants, then the mathematics is its code and a physicist is a programmer.\"",
         third: "\"Should we be more afraid of a computer passing the Turing Test, or one that already intentionnally fails it?\"",
     },
-    description: "I am an enthusiastic and committed individual with a strong scientific background, and I have developed a deep fascination for state-of-the-art technologies like virtual/augmented reality, machine learning, and gamification. I have gained extensive experience developing various projects from inception for healthcare/academia purposes through various game engines. My primary areas of interest lie in the fields of gaming, healthcare, and finance.",
+    description: "I am an enthusiastic and committed individual with a scientific background, and I have developed a deep fascination for state-of-the-art technologies like virtual/augmented reality, machine learning, and gamification. I have gained extensive experience developing various projects from inception for healthcare/academia purposes through various game engines.",
     your_img_url: require('./assets/images/gamingroom.png'),
-};
-
-const dataabout = {
-    title: "abit about my self",
-    resume: require("./assets/images/Resume_KevinChenier_v5.PNG"),
-    notesbac: require("./assets/images/NotesBac.png"),
-    notesbac2: require("./assets/images/NotesBac2.png"),
-    notesmaitrise: require("./assets/images/NotesMaitrise.png"),
-    diplomeBac: require("./assets/images/diplomeBac.png"),
-    aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
 };
 
 const aboutDocuments = [
@@ -35,7 +25,7 @@ const aboutDocuments = [
         title: "Bachelor's Degree Transcript"
     },
     {
-        link: require("./assets/images/Resume_KevinChenier_v5.PNG"),
+        link: require("./assets/images/Resume_KevinChenier_v9.png"),
         title: "Resume"
     },
     {
@@ -142,6 +132,11 @@ const logos = [
         title: "JavaScript",
         link: require('./assets/images/javascript.png'),
         project: "#"
+    },
+    {
+        title: "Meta Quest Pro",
+        link: require('./assets/images/metaquestpro.png'),
+        project: "/portfolio/icanbox"
     },
     {
         title: "Oculus",
@@ -270,6 +265,22 @@ const additionalLogos = [
     {
         title: "Scikit-Learn",
         link: require('./assets/images/scikit-learn.png')
+    },
+    {
+        title: "Godot",
+        link: require('./assets/images/godot.png')
+    },
+    {
+        title: "Aseprite",
+        link: require('./assets/images/asperite.png')
+    },
+    {
+        title: "Photoshop",
+        link: require('./assets/images/photoshop.png')
+    },
+    {
+        title: "Audacity",
+        link: require('./assets/images/audacity.png')
     }
 ]
 
@@ -289,7 +300,51 @@ const services = [{
 
 const dataportfolio = [
     {
-        title: "Pointing Avatar",
+        title: "iCANBox (2023 - Ongoing)",
+        githubLink: "",
+        img: require('./assets/images/icanbox_photo1.png'),
+        description: "Programming a unique virtual reality boxing simulator for elite training",
+        link: "/portfolio/icanbox",
+        bw_image: require('./assets/images/icanbox_photo1_bw.png'),
+
+        //video: require("./assets/videos/pointing_avatar.mp4"),
+        youtube: "https://www.youtube.com/embed/U_DH09MwoJ4",
+        context: "Boxing is a combat sport where decision-making skills can be improved through opposition between two boxers. Organizing such bouts implies high costs, access to high-level international sparring partners, and high risk of injury associated with repetitive blows. In collaboration with INS Quebec, the aim is to develop a unique virtual simulator “iCANBox”, capable of automatic simulation of immersive boxing opponents trained on machine learning.",
+        challenges: "The main challenge here is to adapt the boxing opponents with the machine learning trained animations. The method that will be used is not entirely clear right now, as the file formats might not be supported in Unreal Engine. Further investigation is needed to properly setup the AI agents.",
+        results: "Work still in progress! Prototype coming soon.",
+        technologies: [
+            logos.find(logo => logo.title === "Unreal Engine"),
+            logos.find(logo => logo.title === "C++"),
+            logos.find(logo => logo.title === "Meta Quest Pro"),
+            logos.find(logo => logo.title === "Blender"),
+            logos.find(logo => logo.title === "Git"),
+            additionalLogos.find(logo => logo.title === "MetaHuman Creator"),
+            additionalLogos.find(logo => logo.title === "Photoshop")
+        ],
+        features: ["AI agents using machine learning produced animations to properly simulate boxing movements.", "Develop a full performance metrics system to evaluate the player performance.", "Really good lighting conditions and upper-end graphics for VR", "Full workout in the boxing environment, simulating real boxing match and conditions."],
+    },
+    {
+        title: "Space Survivors (2023 - Ongoing)",
+        githubLink: "",
+        img: require('./assets/images/space_survivors_photo1.png'),
+        description: "2D game inspired by Vampire Survivors with a spaceship instead.",
+        link: "/portfolio/spacesurvivors",
+        bw_image: require('./assets/images/space_survivors_photo1_bw.png'),
+
+        //video: require("./assets/videos/pointing_avatar.mp4"),
+        youtube: "https://www.youtube.com/embed/dNY_pXEJanM",
+        context: "With a friend of mine, we decided to explore the Godot engine, as we were interested to see how an open-source game engine would perform in terms of development. We aimed to do little testing with a Vampire Survivors kind of game, and we saw a potential in continuing the development instead. We plan to do a full space 2D game, with a release on Steam if our free time permits us.",
+        challenges: "The Godot game engine is a really easy to use software once you know the philosophy behind it, but there are still some limitations. It's still a relatively new engine, so the documentation is not as developed like the Unreal Engine or the Unity documentation, and the open-source engine has some stability issues. Overall, I wouldn't say the learning curve is as steep as the other two game engines, the main challenge for us is finding free time to finish the game.",
+        results: "Work still in progress! Beta coming soon (if free time permits it).",
+        technologies: [
+            additionalLogos.find(logo => logo.title === "Godot"),
+            additionalLogos.find(logo => logo.title === "Aseprite"),
+            additionalLogos.find(logo => logo.title === "Audacity")
+        ],
+        features: ["Diverse weapons to choose from as you level up.", "Main bosses to fight.", "Black hole teleportation mechanic.", "AI ennemies get stronger and change as you level up."],
+    },
+    {
+        title: "Pointing Avatar (2022 - 2023)",
         githubLink: "https://github.com/KevinChenier/PointingAvatar/tree/master/Assets/Scripts",
         img: require('./assets/images/pointingavatar_photo1.png'),
         description: "Replicate a user's movements with an avatar and apply modifications to extension/abduction movements.",
@@ -318,7 +373,7 @@ const dataportfolio = [
         features: ["Integrate the target positions provided in an Excel worksheet file.", "Establish a communication link between Unity and Arduino to transmit signals, which are then relayed to vibrators connected to LabVIEW software.", "Read from an .fbx file to generate the MetaHuman avatar directly with the participant body measures", "Implemented a sophisticated protocol with various selectable options, expressed in CSV format, and transmitted directly to the application to create custom protocol steps for each user."],
     },
     {
-        title: "Concert VR",
+        title: "Concert VR (2022)",
         githubLink: "",
         img: require('./assets/images/concertvr_photo1.png'),
         description: "Immerse users in a singing competition experience.",
@@ -332,18 +387,17 @@ const dataportfolio = [
         results: "The application has achieved remarkable success, demonstrating excellent performance and stability without any noticeable issues or bugs. It is currently being utilized for data acquisition purposes, allowing researchers to gather valuable information on participants' stress levels while immersed in the virtual singing competition. This data will provide valuable insights and contribute to the evaluation of participants' reactions and experiences within the simulated contest environment. The application's seamless performance and accurate data collection make it an invaluable tool for studying and understanding the impact of immersive experiences on stress levels and overall participant engagement.",
         technologies: [
             logos.find(logo => logo.title === "Oculus"),
-            logos.find(logo => logo.title === "Unity"),
-            logos.find(logo => logo.title === "C#"),
+            logos.find(logo => logo.title === "Unreal Engine"),
+            logos.find(logo => logo.title === "C++"),
             logos.find(logo => logo.title === "Git"),
             additionalLogos.find(logo => logo.title === "Visual Studio"),
             additionalLogos.find(logo => logo.title === "MetaHuman Creator")
 
         ],
-        features: ["Control crowd mood and reactions.", "Control which questions the judges will ask."],
+        features: ["Fully facial animated characters with audio lip sync.", "Control crowd mood and reactions.", "Control which questions the judges will ask."],
     },
-    
     {
-        title: "Chemistry Lab",
+        title: "Chemistry Lab (2021)",
         githubLink: "",
         img: require('./assets/images/chimie_photo1.png'),
         description: "Simulate chemistry lab experiments typically conducted in a school setting so that students can perform them remotely.",
@@ -365,7 +419,7 @@ const dataportfolio = [
         features: ["Manipulation of 3D objects (molecules and atoms) with the mouse cursor.", "Can move in the scene to change the experiment.", "The progress made by students was saved within the game, eliminating the need for them to restart from the beginning each time they accessed it."]
     },
     {
-        title: "Avator",
+        title: "Avator (2021)",
         githubLink: "",
         img: require('./assets/images/avator_photo1.png'),
         description: "Create a simulated classroom environment where an avatar interacts with you in real-time.",
@@ -394,7 +448,7 @@ const dataportfolio = [
         features: ["Able to choose from a selection of characters to animate in real-time.", "Realistic and highly detailed characters are presented, which immerses the young individuals furthermore.", "Able to modify your voice tonality, so that when you choose a kid avatar, the voice that the participant will hear is accurately represented."]
     },
     {
-        title: "Ataxia Tools",
+        title: "Ataxia Tools (2021 - 2023)",
         githubLink: "https://github.com/KevinChenier/AtaxieTools/tree/master/Assets/Scripts",
         img: require('./assets/images/ataxie_photo1.png'),
         description: "Assess the progression of Friedreich's Ataxia with the help of virtual reality, eye-tracking technology and machine learning.",
@@ -423,10 +477,10 @@ const dataportfolio = [
             additionalLogos.find(logo => logo.title === "PyCharm"),
             additionalLogos.find(logo => logo.title === "MakeHuman")
         ],
-        features: ["Algorithm to calculate number of Square Wave Jerks, with their characteristics.", "Algorithm to calculate the number of saccades, with their characteristics.", "Machine learning developed to try to predict the FARS score based on virtual reality extracted metrics.", "For further information, read our pusblished scientific paper: Pre-validation of a Virtual Reality Tool to Quantify the Progression of Friedreich’s Ataxia "]
+        features: ["Algorithm to calculate number of Square Wave Jerks, with their characteristics.", "Algorithm to calculate the number of saccades, with their characteristics.", "Machine learning developed to try to predict the FARS score based on virtual reality extracted metrics.", "For further information, read our pusblished scientific paper: Pre-validation of a Virtual Reality Tool to Quantify the Severity of Friedreich’s Ataxia "]
     },
     {
-        title: "Holo Puncture",
+        title: "Holo Puncture (2020)",
         githubLink: "",
         img: require('./assets/images/holo_photo1.png'),
         description: "Assist cardiologists in visualizing the heart of a patient with a ventricular septal defect so that they can perform a single heart puncture to occlude the defect.",
@@ -452,7 +506,7 @@ const dataportfolio = [
         features: ["The transparency shader varies based on the distance between the heart and the position of the needle.", "Utilizes Universal Render Pipeline.", "Mixed Reality Toolkit is used for manipulating the heart and needle.", "Puncture coordinates calculated when needle touches the surface of the heart, and saved in Excel file located on the headset directory."],
     },
     {
-        title: "Horror Game",
+        title: "Horror Game (2020)",
         githubLink: "https://github.com/KevinChenier/HorrorGame/tree/master/Source",
         img: require('./assets/images/foxtrotte_photo1.png'),
         description: "Develop an horror survival game.",
@@ -475,7 +529,7 @@ const dataportfolio = [
         features: ["Scary and immersive environment.", "Fully functional AI with logical behaviour.", "Weather system.", "Custom music produced in Logic Pro X.", "Enemies and the extraction point are dynamically generated and spawned throughout the map at the start."]
     },
     {
-        title: "Unknown 9: Awakening",
+        title: "Unknown 9: Awakening (2019)",
         githubLink: "",
         img: require('./assets/images/u9_photo1.jpg'),
         description: "Develop an upcoming Reflector Entertainment RPG game, to be published by Bandai Namco Entertainment.",
@@ -486,7 +540,7 @@ const dataportfolio = [
         youtube: "https://www.youtube.com/embed/DUbFeNDI_FI",
         context: "I was fortunate to secure a gameplay programmer internship at my school, which was my second internship experience. I had been actively seeking a position in the video game industry, so I was thrilled when I was selected for this opportunity. During my internship, I worked on an action-adventure game being developed by Reflector Entertainment, a start-up that is dedicated to creating a new intellectual property called Unknown9. The company's unique approach involves utilizing various forms of media to tell a cohesive and engaging story within the Unknown9 universe.",
         challenges: "As I embarked on my journey in the gaming industry, I initially faced a learning curve in familiarizing myself with the game's codebase and understanding the organization of its various components. For my first task, I was entrusted with the responsibility of designing and implementing an animation system that took into account several crucial factors. These factors included the number of enemies present, the player's state, the status of the combat zone, and the distances between the player and the enemies. This particular assignment proved to be both challenging and immensely educational. I had to focus on writing code that was not only efficient and optimized but also clear and maintainable.",
-        results: "This experience highlighted the significance of maintaining a well-organized codebase and implementing effective source control practices, which are essential in the fast-paced and collaborative nature of game development. Overall, my internship as a gameplay programmer provided me with invaluable experiences and challenges. It allowed me to grow as a programmer, expand my skill set, and gain practical knowledge in game development processes, code optimization, and version control. It was unfortunate that the available positions were full-time, as I was offered a job in the company. However, I had to decline the offer due to not having completed my bachelor's degree.",
+        results: "This experience highlighted the significance of maintaining a well-organized codebase and implementing effective source control practices, which are essential in the fast-paced and collaborative nature of game development. Overall, my internship as a gameplay programmer provided me with invaluable experiences and challenges. It allowed me to grow as a programmer, expand my skill set, and gain practical knowledge in game development processes, code optimization, and version control. It was unfortunate that the available positions were full-time, as I was offered a job in the company. However, I had to decline the offer due to not having completed my bachelor's degree at the time.",
         technologies: [
             logos.find(logo => logo.title === "Unreal Engine"),
             logos.find(logo => logo.title === "C++"),
@@ -497,7 +551,7 @@ const dataportfolio = [
         features: ["N/A"]
     },
     {
-        title: "VR Treadmill",
+        title: "VR Treadmill (2019)",
         githubLink: "https://github.com/KevinChenier/DetectVR/tree/master/Assets/UserInterface/Scripts",
         img: require('./assets/images/treadmill_photo1.png'),
         description: "Hack a treadmill and use it as a gaming device for virtual reality games.",
@@ -523,7 +577,7 @@ const dataportfolio = [
         features: ["Play Skyrim VR while walking on the treadmill.", "Control the treadmill with Xbox controller and keyboard inputs.", "While using the Unity application, it was possible to control the treadmill with the headset position, so no controllers were needed.", "Custom Unity application that lets you visit the Statue of Liberty!"]
     },
     {
-        title: "Classification VR",
+        title: "Classification VR (2018- 2019)",
         githubLink: "",
         img: require('./assets/images/classificationVR_photo1.png'),
         description: "Classify documents in virtual reality with more efficiency.",
@@ -547,7 +601,7 @@ const dataportfolio = [
         features: ["Animated visuals to streamline the process of reorganizing invoices.", "Rotate invoices / textures.", "Group invoices together or put them in the bin.", "Retrieve and send data to a database."]
     },
     {
-        title: "Hovercraft",
+        title: "Hovercraft (2018)",
         githubLink: "",
         img: require('./assets/images/aero_photo1.png'),
         description: "Build an hovercraft for competition purposes.",
@@ -589,7 +643,6 @@ const socialprofils = {
 };
 export {
     meta,
-    dataabout,
     dataportfolio,
     worktimeline,
     skills,

@@ -83,13 +83,13 @@ export const PortfolioProject = (projectIndex) => {
             </div>
         </Container>
         <div className="arrow-container left">
-        <Link to={projectsTimeline[previousIndex]} className="arrow-link">
+        <Link to={projectsTimeline[nextIndex]} className="arrow-link">
                 <i className="arrow left-arrow"></i>
             </Link>
         </div>
         {/* Right arrow */}
         <div className="arrow-container right">
-            <Link to={projectsTimeline[nextIndex]} className="arrow-link">
+            <Link to={projectsTimeline[previousIndex]} className="arrow-link">
                 <i className="arrow right-arrow"></i>
             </Link>
         </div>

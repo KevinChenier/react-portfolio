@@ -2,5 +2,5 @@ import "../portfolioprojectstyle.css";
 import { PortfolioProject } from '../portfolioproject';
 
 export const VRTreadmill = () => {
-  return PortfolioProject(8);
+  return PortfolioProject(10);
 };

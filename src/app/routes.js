@@ -14,6 +14,8 @@ import { VRTreadmill } from "../pages/portfolio/vrtreadmill";
 import { HoloPuncture } from "../pages/portfolio/holopuncture";
 import { PointingAvatar } from "../pages/portfolio/pointingavatar";
 import { Avator } from "../pages/portfolio/avator";
+import { SpaceSurvivors } from "../pages/portfolio/spacesurvivors";
+import { ICANBox } from "../pages/portfolio/icanbox";
 import { ContactUs } from "../pages/contact";
 import { About } from "../pages/about";
 import { Socialicons } from "../components/socialicons";
@@ -45,6 +47,8 @@ const AnimatedRoutes = withRouter(({ location }) => (
         <Route path="/portfolio/holopuncture" element={<HoloPuncture />} />
         <Route path="/portfolio/pointingavatar" element={<PointingAvatar />} />
         <Route path="/portfolio/avator" element={<Avator />} />
+        <Route path="/portfolio/spacesurvivors" element={<SpaceSurvivors />} />
+        <Route path="/portfolio/icanbox" element={<ICANBox />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="*" element={<Home />} />
       </Routes>

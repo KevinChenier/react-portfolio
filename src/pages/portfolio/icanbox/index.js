@@ -1,6 +1,6 @@
 import "../portfolioprojectstyle.css";
 import { PortfolioProject } from '../portfolioproject';
 
-export const ConcertVR = () => {
-  return PortfolioProject(3);
+export const ICANBox = () => {
+  return PortfolioProject(0);
 };
